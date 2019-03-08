@@ -10,6 +10,9 @@ using Microsoft.Extensions.Options;
 
 namespace AgentFramework.AspNetCore.Configuration
 {
+    /// <summary>
+    /// Agent Builder
+    /// </summary>
     public class AgentBuilder
     {
         private string _issuerSeed;
@@ -26,6 +29,13 @@ namespace AgentFramework.AspNetCore.Configuration
         private readonly PoolOptions _poolOptions;
         private bool _createIssuer;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AgentBuilder"/> class.
+        /// </summary>
+        /// <param name="poolService">The pool service.</param>
+        /// <param name="provisioningService">The provisioning service.</param>
+        /// <param name="walletOptions">The wallet options.</param>
+        /// <param name="poolOptions">The pool options.</param>
         public AgentBuilder(
             IPoolService poolService,
             IProvisioningService provisioningService,
